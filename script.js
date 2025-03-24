@@ -108,3 +108,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+function afficherStats() {
+    alert("Affichage des caractéristiques !");
+}
+
+function afficherInventaire() {
+    alert("Affichage de l'inventaire !");
+}
+
+function afficherQuetes() {
+    alert("Affichage des quêtes !");
+}
