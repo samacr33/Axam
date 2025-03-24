@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Les Terres de l'Ombre - Interface</title>
+  <link rel="stylesheet" href="interface.css" />
+</head>
+<body>
+  <h1>Bienvenue dans les Terres de l'Ombre</h1>
+  <p>Votre aventure commence ici...</p>
+
+  <!-- Conteneur de la popup -->
+  <div id="popupContainer" class="popup-container">
+    <div class="popup-content">
+      <span id="popupClose">&times;</span>
+      <div id="popupBody"></div>
+    </div>
+  </div>
+
+  <!-- Barre du bas -->
+  <div class="bottom-bar">
+    <div class="bar-item" id="statsBtn">
+      <img src="images/stats-icon.png" alt="Caractéristiques" />
+      <span>Caractéristiques</span>
+    </div>
+    <div class="bar-item" id="inventoryBtn">
+      <img src="images/inventory-icon.png" alt="Inventaire" />
+      <span>Inventaire</span>
+    </div>
+    <div class="bar-item" id="questsBtn">
+      <img src="images/quests-icon.png" alt="Quêtes" />
+      <span>Quêtes</span>
+    </div>
+  </div>
+
+  <script src="interface.js"></script>
+</body>
+</html>
