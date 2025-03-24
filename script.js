@@ -14,3 +14,20 @@ function startGame() {
         alert("Veuillez sélectionner un personnage avant de commencer !");
     }
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const statsIcon = document.getElementById("stats-icon");
+    const inventoryIcon = document.getElementById("inventory-icon");
+    const questsIcon = document.getElementById("quests-icon");
+
+    const statsPanel = document.getElementById("stats-panel");
+    const inventoryPanel = document.getElementById("inventory-panel");
+    const questsPanel = document.getElementById("quests-panel");
+
+    function togglePanel(panel) {
+        panel.classList.toggle("hidden");
+    }
+
+    statsIcon.addEventListener("click", () => togglePanel(statsPanel));
+    inventoryIcon.addEventListener("click", () => togglePanel(inventoryPanel));
+    questsIcon.addEventListener("click", () => togglePanel(questsPanel));
+});
