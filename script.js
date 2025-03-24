@@ -13,3 +13,6 @@ document.getElementById("start-game").addEventListener("click", function() {
         window.location.href = "game.html"; 
     }
 });
+function selectCharacter(name) {
+    document.getElementById("selected-character").textContent = "Personnage sélectionné : " + name;
+}
