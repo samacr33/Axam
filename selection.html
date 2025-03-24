@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sélection des Personnages</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Choisissez votre personnage</h1>
+    <div class="characters-container">
+        <div class="character">
+            <img src="prêtre.jpg" alt="Prêtre Exorciste">
+            <button onclick="selectCharacter('Prêtre Exorciste')">Sélectionner</button>
+        </div>
+        <div class="character">
+            <img src="chasseur.jpg" alt="Chasseur de Vampires">
+            <button onclick="selectCharacter('Chasseur de Vampires')">Sélectionner</button>
+        </div>
+        <div class="character">
+            <img src="sorcière.jpg" alt="Sorcière">
+            <button onclick="selectCharacter('Sorcière')">Sélectionner</button>
+        </div>
+        <div class="character">
+            <img src="alchimiste.jpg" alt="Alchimiste">
+            <button onclick="selectCharacter('Alchimiste')">Sélectionner</button>
+        </div>
+        <div class="character">
+            <img src="ingénieur.jpg" alt="Ingénieur">
+            <button onclick="selectCharacter('Ingénieur')">Sélectionner</button>
+        </div>
+        <div class="character">
+            <img src="chimère.jpg" alt="Chimère">
+            <button onclick="selectCharacter('Chimère')">Sélectionner</button>
+        </div>
+    </div>
+    <p id="selected-character">Personnage sélectionné : Aucun</p>
+    <button id="start-game">Commencer l'aventure</button>
 
+    <script src="script.js"></script>
+</body>
+</html>
