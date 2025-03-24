@@ -9,33 +9,40 @@
 <body>
     <h1>Choisissez votre personnage</h1>
     <div class="characters-container">
-        <div class="character">
-            <img src="prêtre.jpg" alt="Prêtre Exorciste">
-            <button onclick="selectCharacter('Prêtre Exorciste')">Sélectionner</button>
+        <div class="character" onclick="selectCharacter('Prêtre Exorciste', 'Un combattant sacré qui bannit les vampires.')">
+            <img src="images/prêtre.jpg" alt="Prêtre Exorciste">
+            <p>Prêtre Exorciste</p>
+            <span>Un combattant sacré qui bannit les vampires.</span>
         </div>
-        <div class="character">
-            <img src="chasseur.jpg" alt="Chasseur de Vampires">
-            <button onclick="selectCharacter('Chasseur de Vampires')">Sélectionner</button>
+        <div class="character" onclick="selectCharacter('Chasseur de Vampires', 'Maître des armes à feu et pieux en argent.')">
+            <img src="images/chasseur.jpg" alt="Chasseur de Vampires">
+            <p>Chasseur de Vampires</p>
+            <span>Maître des armes à feu et pieux en argent.</span>
         </div>
-        <div class="character">
-            <img src="sorcière.jpg" alt="Sorcière">
-            <button onclick="selectCharacter('Sorcière')">Sélectionner</button>
+        <div class="character" onclick="selectCharacter('Sorcière', 'Maîtresse des sorts qui piègent les démons.')">
+            <img src="images/sorcière.jpg" alt="Sorcière">
+            <p>Sorcière</p>
+            <span>Maîtresse des sorts qui piègent les démons.</span>
         </div>
-        <div class="character">
-            <img src="alchimiste.jpg" alt="Alchimiste">
-            <button onclick="selectCharacter('Alchimiste')">Sélectionner</button>
+        <div class="character" onclick="selectCharacter('Alchimiste', 'Utilise des potions et des cercles de transmutation.')">
+            <img src="images/alchimiste.jpg" alt="Alchimiste">
+            <p>Alchimiste</p>
+            <span>Utilise des potions et des cercles de transmutation.</span>
         </div>
-        <div class="character">
-            <img src="ingénieur.jpg" alt="Ingénieur">
-            <button onclick="selectCharacter('Ingénieur')">Sélectionner</button>
+        <div class="character" onclick="selectCharacter('Ingénieur', 'Construis des tourelles et pose des explosifs.')">
+            <img src="images/ingénieur.jpg" alt="Ingénieur">
+            <p>Ingénieur</p>
+            <span>Construis des tourelles et pose des explosifs.</span>
         </div>
-        <div class="character">
-            <img src="chimère.jpg" alt="Chimère">
-            <button onclick="selectCharacter('Chimère')">Sélectionner</button>
+        <div class="character" onclick="selectCharacter('Chimère', 'Un hybride homme-vampire chassant les démons.')">
+            <img src="images/chimère.jpg" alt="Chimère">
+            <p>Chimère</p>
+            <span>Un hybride homme-vampire chassant les démons.</span>
         </div>
     </div>
+
     <p id="selected-character">Personnage sélectionné : Aucun</p>
-    <button id="start-game">Commencer l'aventure</button>
+    <button id="start-game" onclick="startGame()">Commencer l'aventure</button>
 
     <script src="script.js"></script>
 </body>
