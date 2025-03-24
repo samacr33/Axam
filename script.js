@@ -1,20 +1,16 @@
-function selectCharacter(character) {
-    document.getElementById("selected-character").innerText = "Personnage sélectionné : " + character;
+function selectCharacter(name, description) {
+    document.getElementById("selected-character").innerText = "Personnage sélectionné : " + name;
+    localStorage.setItem("selectedCharacter", name);
 
-    // Vérifier et afficher le bouton si nécessaire
-    let startButton = document.getElementById("start-game");
-    startButton.style.display = "block";
-
-    // Sauvegarder le personnage sélectionné (optionnel si besoin)
-    localStorage.setItem("selectedCharacter", character);
+    // Afficher le bouton une fois un personnage sélectionné
+    document.getElementById("start-game").style.display = "block";
 }
 
-// Assurer que le bouton est cliquable et redirige
-document.getElementById("start-game").addEventListener("click", function() {
-    let selectedCharacter = localStorage.getItem("selectedCharacter");
-    if (selectedCharacter) {
-        window.location.href = "jeu.html"; // Remplace par la bonne page
+function startGame() {
+    let character = localStorage.getItem("selectedCharacter");
+    if (character) {
+        window.location.href = "jeu.html"; // Remplace "jeu.html" par le bon fichier
     } else {
-        alert("Veuillez sélectionner un personnage avant de commencer.");
+        alert("Veuillez sélectionner un personnage avant de commencer !");
     }
-});
+}
