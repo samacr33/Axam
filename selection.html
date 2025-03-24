@@ -4,57 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sélection des Personnages</title>
-    <style>
-        .character { margin-bottom: 10px; }
-        #character-display { text-align: center; margin-top: 20px; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <h1>Choisissez votre personnage</h1>
-
-    <div class="character">
-        <button onclick="selectCharacter('Prêtre Exorciste', 'prete.jpg')">Prêtre Exorciste</button>
+    <div class="characters-container">
+        <div class="character">
+            <img src="prêtre.jpg" alt="Prêtre Exorciste">
+            <button onclick="selectCharacter('Prêtre Exorciste')">Sélectionner</button>
+        </div>
+        <div class="character">
+            <img src="chasseur.jpg" alt="Chasseur de Vampires">
+            <button onclick="selectCharacter('Chasseur de Vampires')">Sélectionner</button>
+        </div>
+        <div class="character">
+            <img src="sorcière.jpg" alt="Sorcière">
+            <button onclick="selectCharacter('Sorcière')">Sélectionner</button>
+        </div>
+        <div class="character">
+            <img src="alchimiste.jpg" alt="Alchimiste">
+            <button onclick="selectCharacter('Alchimiste')">Sélectionner</button>
+        </div>
+        <div class="character">
+            <img src="ingénieur.jpg" alt="Ingénieur">
+            <button onclick="selectCharacter('Ingénieur')">Sélectionner</button>
+        </div>
+        <div class="character">
+            <img src="chimère.jpg" alt="Chimère">
+            <button onclick="selectCharacter('Chimère')">Sélectionner</button>
+        </div>
     </div>
-    <div class="character">
-        <button onclick="selectCharacter('Chasseur de Vampires', 'chasseur.jpg')">Chasseur de Vampires</button>
-    </div>
-    <div class="character">
-        <button onclick="selectCharacter('Sorcière', 'sorciere.jpg')">Sorcière</button>
-    </div>
-    <div class="character">
-        <button onclick="selectCharacter('Alchimiste', 'alchimiste.jpg')">Alchimiste</button>
-    </div>
-    <div class="character">
-        <button onclick="selectCharacter('Ingénieur', 'ingenieur.jpg')">Ingénieur</button>
-    </div>
-    <div class="character">
-        <button onclick="selectCharacter('Chimère', 'chimere.jpg')">Chimère</button>
-    </div>
+    <p id="selected-character">Personnage sélectionné : Aucun</p>
+    <button id="start-game">Commencer l'aventure</button>
 
-    <!-- Ajout de la zone d'affichage du personnage sélectionné -->
-    <div id="character-display">
-        <p id="selected-character">Personnage sélectionné : Aucun</p>
-        <img id="selected-image" src="" alt="" style="display: none; width: 300px; margin-top: 20px;">
-        <button id="start-game" style="display: none;" onclick="startGame()">Commencer l'aventure</button>
-    </div>
-
-    <script>
-        function selectCharacter(name, imagePath) {
-            document.getElementById("selected-character").innerText = "Personnage sélectionné : " + name;
-
-            let selectedImage = document.getElementById("selected-image");
-            selectedImage.src = imagePath;
-            selectedImage.style.display = "block"; // Affiche l'image
-
-            document.getElementById("start-game").style.display = "block"; // Affiche le bouton "Commencer"
-        }
-
-        function startGame() {
-            alert("Chargement du jeu avec " + document.getElementById("selected-character").innerText);
-            // Rediriger vers le jeu ou lancer une nouvelle scène
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
